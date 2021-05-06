@@ -12,6 +12,10 @@ axios.get("https://api.github.com/users/Ethan-Edmond")
   .catch((err) => {
     console.log("ERR:", err);
   });
+
+fetch("https://github.com/users/Ethan-Edmond/contributions")
+  .then(data => console.log(data))
+  .catch(err => console.log(err));
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
     github info! You will need to understand the structure of this
@@ -76,7 +80,7 @@ followersArray.forEach((follower) => {
     </div>
 */
 
-function cardMaker ({avatar_url, name, login, location, url, followers, following, bio}){
+function cardMaker ({avatar_url, name, login, location, html_url, followers, following, bio}){
   // creating the elements
   const card = document.createElement("div");
   const cardImage = document.createElement("img");
@@ -115,8 +119,8 @@ function cardMaker ({avatar_url, name, login, location, url, followers, followin
   cardName.textContent = name;
   cardUserName.textContent = login;
   cardLocation.textContent = `Location: ${location}`;
-  cardLink.href = url;
-  cardLink.textContent = url;
+  cardLink.href = html_url;
+  cardLink.textContent = html_url;
   cardFollowers.textContent = `Followers: ${followers}`;
   cardFollowing.textContent = `Following: ${following}`;
   cardBio.textContent = `Bio: ${bio}`;
