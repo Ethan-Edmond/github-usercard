@@ -107,7 +107,7 @@ function cardMaker ({avatar_url, name, login, location, url, followers, followin
   cardInfo.appendChild(cardFollowing);
   cardInfo.appendChild(cardBio);
 
-  cardProfile.textContent = "Profile: ";// guess how long it took me to figure this out?
+  cardProfile.textContent = "Profile: ";// guess how long it took me to figure this ordering out?
   cardProfile.appendChild(cardLink);
 
   // setting the content and attributes
