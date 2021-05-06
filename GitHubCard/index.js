@@ -4,6 +4,7 @@
     https://api.github.com/users/<your name>
 */
 
+console.log(axios);
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
     github info! You will need to understand the structure of this
